@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbc>
+		<driver>com.mysql.cj.jdbc.Driver</driver><!--驱动程序类-->
+		 <url>jdbc:mysql://8.141.153.10:3306/jdbcstudy</url>
+		<!--数据库连接所用URL-->
+		<user>root</user><!--连接数据库所用用户名-->
+		<password>mysql123456</password><!--连接数据库所用密码-->
+</jdbc> 

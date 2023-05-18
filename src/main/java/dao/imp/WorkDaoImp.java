@@ -17,7 +17,7 @@ public class WorkDaoImp implements IWorkDao {
 	public void saveWork(final Work work) {
 		Connection conn = JdbcConnectionFactory.getConnection();
 		JdbcTemplate template = new JdbcTemplate(conn);
-		String sql = "insert into work_tbl values(w_seq.nextval,?,?,?,?)";
+		String sql = "insert into work_tbl (processDate,workId,type, nextId) values(?,?,?,?)";
 		template.update(sql, new PreparedStatementSetter() {
 			public void set(PreparedStatement pstmt) throws SQLException {
 

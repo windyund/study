@@ -10,7 +10,7 @@ create table customer_tbl(
 
 # 表2
 create table work_tbl(
- id int primary key,
+ id int primary key ,
  processDate date not null,
  workId int not null,
  type int not null,
@@ -41,4 +41,12 @@ create table hl_tbl(
 );
 
 insert into hl_tbl values(0);
-# create sequence w_seq start with 1 increment by 1;
+
+# 序列表
+create table table_w_seq (
+w_seq        VARCHAR(50) NOT NULL, -- 序列名称
+nextval     INT         NOT NULL, -- 当前值
+increment_val   INT         NOT NULL    DEFAULT 1, -- 步长(跨度)
+PRIMARY KEY (w_seq)  );
+
+create sequence w_seq start with 1 increment by 1;
